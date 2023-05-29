@@ -48,7 +48,7 @@ const [index, setIndex] = useState(1);
           return (
             <>
             <div className="form">
-                <div style={{ marginBottom: "0.2rem", fontSize:'1.5rem', color:'#A02929', alignSelf:'flex-start' }}>
+                <div style={{ marginBottom: "0.2rem", fontSize:'1.5rem', color:'rgb(222, 46, 6)', alignSelf:'flex-start' }}>
                 Personal Details
                 </div>
 
@@ -94,53 +94,10 @@ const [index, setIndex] = useState(1);
                     Department
                 </div>
                 <input value={department} onChange={e => setDepartment(e.target.value)} placeholder="Department Name" />
-
-                <div style={{ 
-                marginBottom: "1.0rem", 
-                fontSize:'1.2rem', 
-                color:'var(--primary)', 
-                alignSelf:'flex-start', 
-                marginTop:"1.5rem" }}>
-                    Disgnation
-                </div>
-                <input value={designation} onChange={e => setDesignation(e.target.value)} placeholder="Designation" />
-
-
-                <div style={{ 
-                marginBottom: "1.0rem", 
-                fontSize:'1.2rem', 
-                color:'var(--primary)', 
-                alignSelf:'flex-start', 
-                marginTop:"1.5rem" }}>
-                    Date of Appointment 
-                </div>
-                <input type="date" value={date} onChange={e => setDate(e.target.value)} placeholder="Example: January 7, 2019" />
-
-                <div style={{ 
-                marginBottom: "1.0rem", 
-                fontSize:'1.2rem', 
-                color:'var(--primary)', 
-                alignSelf:'flex-start', 
-                marginTop:"1.5rem" }}>
-                Somaiya Email ID
-                </div>
-                <input placeholder="Please Enter Somaiya Email ID" value={Somaiyaemail} onChange={e => setSomaiyaEmail(e.target.value)}/>
-
-                <div style={{ 
-                marginBottom: "1.0rem", 
-                fontSize:'1.2rem', 
-                color:'var(--primary)', 
-                alignSelf:'flex-start', 
-                marginTop:"1.5rem" }}>
-                Phone Number
-                </div>
-                <input type="tel" name="telphone"  pattern="[0-9]{10}" placeholder="Please Enter Somaiya Email ID" value={phone} onChange={e => setPhone(e.target.value)}/>
-                
                 <div className="formfooter">
-                <button className="btn prev" disabled={index===1} onClick={prevbtn} >Previous</button>
-                <button className="btn next" onClick={nextbtn}>Next</button>
+                  <button className="btn prev" disabled={index===1} onClick={prevbtn} >Previous</button>
+                  <button className="btn next" onClick={nextbtn}>Next</button>
                 </div>
-
             </div>
             
             </>
@@ -148,77 +105,91 @@ const [index, setIndex] = useState(1);
           );
         case 2:
           return (
-              <>
-              
-            <div className="form">
-                <div style={{ marginBottom: "0.2rem", fontSize:'1.5rem', color:'#A02929', alignSelf:'flex-start' }}>
-                Award Catergory
+            <>
+              <div className="form">
+                <div style={{ marginBottom: "0.2rem", fontSize:'1.5rem', color:'rgb(222, 46, 6)', alignSelf:'flex-start' }}>
+                  Faculty Details
                 </div>
+                <div style={{ 
+                  marginBottom: "1.0rem", 
+                  fontSize:'1.2rem', 
+                  color:'var(--primary)', 
+                  alignSelf:'flex-start', 
+                  marginTop:"1.5rem" }}>
+                      Disgnation
+                  </div>
+                  <input value={designation} onChange={e => setDesignation(e.target.value)} placeholder="Designation" />
 
-                <form action="#">
-                <div style={{ marginBottom: "1.0rem", fontSize:'1.2rem', color:'var(--primary)', alignSelf:'flex-start', marginTop:"1.5rem" }}>Award Category</div>
-                <select name="yoa" id="yoa" style={{
-                    
-                    borderRadius:5,
-                    width:"17rem",
-                    height:"2.0rem",
-                    color:"gray"
-                }}>
-                    <option value="select">Select Award Category</option>
-                    <option value="Excellence in Teaching (more than 3 years of service)">Excellence in Teaching (more than 3 years of service)</option>
-                    <option value="Promising Teacher of the Year (1 to 3 years of service)">Promising Teacher of the Year (1 to 3 years of service)</option>
-                    
-                </select>
-                </form>
 
-                <div className="formfooter">
-                <button className="btn prev" disabled={index===1} onClick={prevbtn} >Previous</button>
-                <button className="btn next" onClick={nextbtn}>Next</button>
+                  <div style={{ 
+                  marginBottom: "1.0rem", 
+                  fontSize:'1.2rem', 
+                  color:'var(--primary)', 
+                  alignSelf:'flex-start', 
+                  marginTop:"1.5rem" }}>
+                      Date of Appointment 
+                  </div>
+                  <input type="date" value={date} onChange={e => setDate(e.target.value)} placeholder="Example: January 7, 2019" />
+
+                  <div style={{ 
+                  marginBottom: "1.0rem", 
+                  fontSize:'1.2rem', 
+                  color:'var(--primary)', 
+                  alignSelf:'flex-start', 
+                  marginTop:"1.5rem" }}>
+                  Somaiya Email ID
+                  </div>
+                  <input placeholder="Please Enter Somaiya Email ID" value={Somaiyaemail} onChange={e => setSomaiyaEmail(e.target.value)}/>
+
+                  <div style={{ 
+                  marginBottom: "1.0rem", 
+                  fontSize:'1.2rem', 
+                  color:'var(--primary)', 
+                  alignSelf:'flex-start', 
+                  marginTop:"1.5rem" }}>
+                  Phone Number
+                  </div>
+                  <input type="tel" name="telphone"  pattern="[0-9]{10}" placeholder="Please Enter Somaiya Email ID" value={phone} onChange={e => setPhone(e.target.value)}/>
+                  
+                  <div className="formfooter">
+                  <button className="btn prev" disabled={index===1} onClick={prevbtn} >Previous</button>
+                  <button className="btn next" onClick={nextbtn}>Next</button>
                 </div>
-                    
-
-
-                        
-                        
-            </div>
-                        
-                    
-                    
-                        
-                        
-              </>
+              </div>
+            </>
           );
         case 3:
           return (
             <>
-            
-            <label className='n'>Enter your number:
-        <input
-          type="text" 
-          // value=
-          // onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-      <label className='n'>Enter your name:
-        <input
-          type="text" 
-          // value=
-          // onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-      <label className='n'>Enter your name:
-        <input
-          type="text" 
-          // value=
-          // onChange={(e) => setName(e.target.value)}
-        />
-      </label>
+              <div className="form">
+                  <div style={{ marginBottom: "0.2rem", fontSize:'1.5rem', color:'rgb(222, 46, 6)', alignSelf:'flex-start' }}>
+                  Award Catergory
+                  </div>
 
-      <div className="formfooter">
-      <button className="btn prev" disabled={index===1} onClick={prevbtn} >Previous</button>
-      <button className="btn next" type='submit'>Submit</button>
-        </div>
-      </>
+                  <form action="#">
+                  <div style={{ marginBottom: "1.0rem", fontSize:'1.2rem', color:'var(--primary)', alignSelf:'flex-start', marginTop:"1.5rem" }}>Award Category</div>
+                  <select name="yoa" id="yoa" style={{
+                      
+                      borderRadius:8,
+                      width:"17rem",
+                      color:"gray",
+                      border:"none",
+                      fontSize:"1rem",
+                      padding:"0.75rem",
+                  }}>
+                      <option value="select">Select Award Category</option>
+                      <option value="Excellence in Teaching (more than 3 years of service)">Excellence in Teaching (more than 3 years of service)</option>
+                      <option value="Promising Teacher of the Year (1 to 3 years of service)">Promising Teacher of the Year (1 to 3 years of service)</option>
+                      
+                  </select>
+                  </form>
+
+                  <div className="formfooter">
+                  <button className="btn prev" disabled={index===1} onClick={prevbtn} >Previous</button>
+                  <button className="btn next" onClick={nextbtn}>Next</button>
+                  </div>         
+              </div>  
+            </>
           );
           default:
             return (
@@ -251,9 +222,9 @@ const [index, setIndex] = useState(1);
       <div
         style={{
           display: "flex",
-          backgroundColor: "#D9D9D9",
+          backgroundColor: "#dddddd",
           flexDirection: "column",
-          padding: "2rem",
+          padding: "3rem",
           borderRadius: "10px",
           width:"50%",
           marginTop:'150px',

@@ -17,21 +17,21 @@ export default function Multiprogressbar(props) {
       >
         <Step transition="scale">
           {({ accomplished ,index}) => (
-            <div className={`step ${accomplished ? "completed" : ""}`}>
+            <div style={{padding:"22px"}} className={`step ${accomplished ? "completed" : ""}`}>
                 0%
             </div>
           )}
         </Step>
         <Step transition="scale">
           {({ accomplished,index }) => (
-            <div className={`step ${accomplished ? "completed" : ""}`}>
+            <div style={{padding:"22px"}} className={`step ${accomplished ? "completed" : ""}`}>
             50%
             </div>
           )}
         </Step>
         <Step transition="scale">
           {({ accomplished ,index }) => (
-            <div className={`step ${accomplished ? "completed" : ""}`}>
+            <div style={{padding:"22px"}} className={`step ${accomplished ? "completed" : ""}`}>
             100%
             </div>
           )}
